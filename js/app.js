@@ -136,8 +136,8 @@ function moveTo(i, j) {
 			gEndBall = 0
 			gBallsCount = 0
 			elCount.innerText = gBallsCount
-			var elDiv = document.querySelector('.restart')
-			elDiv.innerHTML = '<button class="restart-game" onclick="initGame()">new game</button>'
+			var elSpan = document.querySelector('.restart')
+			elSpan.innerHTML = '<button class="restart-game" onclick="initGame()">new game</button>'
 		}
 
 		// MOVING from current position
