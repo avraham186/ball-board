@@ -100,8 +100,8 @@ function renderBoard(board) {
 		strHTML += '</tr>\n';
 	}
 
-	console.log('strHTML is:');
-	console.log(strHTML);
+	// console.log('strHTML is:');
+	// console.log(strHTML);
 	var elBoard = document.querySelector('.board');
 	// var elCount = document.querySelector('.count')
 	// elCount.innerText = gBallsCount
@@ -135,6 +135,7 @@ function moveTo(i, j) {
 			clearInterval(gBallsAssignTime)
 			gEndBall = 0
 			gBallsCount = 0
+			elCount.innerText = gBallsCount
 			var elDiv = document.querySelector('.restart')
 			elDiv.innerHTML = '<button class="restart-game" onclick="initGame()">new game</button>'
 		}
@@ -177,7 +178,7 @@ function handleKey(event) {
 			if (i === 5 && j === 0) {
 				var delCoor = { i: 5, j: 0 }
 				gBoard[gGamerPos.i][gGamerPos.j].gameElement = null;
-				gGamerPos = { i: 5 , j: 11 }
+				gGamerPos = { i: 5, j: 11 }
 				gBoard[gGamerPos.i][gGamerPos.j].gameElement = GAMER;
 				renderCell(delCoor, '');
 				renderCell(gGamerPos, GAMER_IMG);
